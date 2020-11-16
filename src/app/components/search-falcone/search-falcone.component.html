@@ -1,0 +1,14 @@
+<div class="search-wrapper">
+    <h2 class="fade-left-to-right"> Select 4 planets to search (out of the total 6) and space vehicles to send to these
+        planets </h2>
+    <h3 class="fade-right-to-left"> Time taken for the vehicles to reach their targets: {{totalTimeTaken}} hours
+    </h3>
+    <div class="planet-wrapper">
+        <app-planets class="fade-left-to-right"></app-planets>
+        <app-planets class="fade-in"></app-planets>
+        <app-planets class="fade-in"></app-planets>
+        <app-planets class="fade-right-to-left"></app-planets>
+    </div>
+    <button class="btn find-btn fade-in-down" (click)="findFalcone()" *ngIf="sendRequest"> Find Falcone
+    </button>
+</div>

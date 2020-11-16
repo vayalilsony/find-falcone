@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://use.typekit.net/eqc5cbm.css");
+@import "./scss/reset";
+@import "./scss/flex-mixins";
+@import "./scss/variables";
+@import "./scss/button";
+@import "./scss/popup";
+@import "./scss/common";
+@import "./scss/animations";
+@import "./scss/webkit-scrollbar";
+@import "./scss/mediaqueries";
+@import "./scss/responsive";
+
+
+html,
+body {
+    background-color: $white;
+}
+body{
+    margin: 0;
+    font-family: "gill-sans-nova", sans-serif;
+}

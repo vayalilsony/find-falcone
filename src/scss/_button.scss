@@ -1,0 +1,50 @@
+.btn {
+    border: none;
+    padding: rem(16) rem(32);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: rem(20);
+    margin: rem(4) rem(8);
+    transition-duration: 0.4s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+
+.find-falcone {
+    background-color: $light-blue;
+    border: 2px solid $light-blue;
+    border-radius: rem(5);
+    color: $white;
+    text-transform: uppercase;
+    &:hover {
+        border: 2px solid $green;
+        background-color: $green;
+    }
+}
+.popup-btn-wrapper {
+    padding: 0 rem(80);
+}
+.popup-button {
+    padding: rem(15);
+    color: $white;
+    border-radius: rem(5);
+    text-decoration: none;
+    background-color: $green;
+    font-size: rem(20);
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    &:hover {
+        background-color: $light-blue;
+    }
+}
+.find-btn{
+    margin:rem(20) 0;
+    background-color: $orange;
+    border-radius: rem(5);
+    color: $white;
+    text-transform: uppercase;
+    &:hover {
+        background-color: $red;
+    }
+}

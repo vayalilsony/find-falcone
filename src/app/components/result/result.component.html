@@ -1,0 +1,18 @@
+<div class="result-wrapper">
+    <h1>Finding Falcone!</h1>
+    <div class="image-wrapper">
+        <img [src] = "imagePath" alt="king shan" />
+    </div>
+    <div class="result-content">
+        <div *ngIf="finalResponse.status == 'success'" class="success-wrapper">
+            <h3>Success! Congratulations on Finding Falcone. King Shan is mighty pleased.</h3>
+            <h5>Time taken: {{finalResponse.timeTaken}} hours</h5>
+            <h5> Planet found: {{finalResponse.planet_name}}</h5>
+        </div>
+        <div *ngIf="finalResponse.status == 'false'" class="failure-wrapper">
+            <h3>Failed to find Falcone</h3>
+            <h5>Time taken: {{finalResponse.timeTaken}} hours</h5>
+        </div>
+        <button class="btn find-falcone" (click)="reset()"> Start Again </button>
+    </div>
+</div>

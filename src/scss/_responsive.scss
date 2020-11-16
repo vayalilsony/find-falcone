@@ -1,0 +1,66 @@
+@import "../scss/flex-mixins";
+@import "../scss/mediaqueries";
+@include hd-screen {
+    html {
+        font-size: 0.83vw;
+    }
+}
+@include wxga-screen {
+    html {
+        font-size: 0.82vw;
+    }
+    body{
+        height: 100vh;
+    } 
+    .search-wrapper{
+        height: 100%;
+    }   
+}
+@include widescreen {
+    html {
+        font-size: 0.83vw;
+    }
+}
+@include desktop {
+    html {
+        font-size: 1.1vw;
+    }
+}
+@include tablet {
+    html {
+        font-size: 1.1vw;
+    }
+}
+@include mobile {
+    html {
+        font-size: 2.8vw;
+    }
+    .popup {
+        width: 90%;
+        .close {
+            top: 5px;
+            right: 10px;
+        }
+    }
+    .home-wrapper {
+        padding: rem(40);
+        .home-container {
+            padding: rem(10);
+            @include flex-direction(column-reverse);
+            .left-container,
+            .right-container {
+                width: 100%;
+                margin-bottom: rem(20);
+            }
+        }
+        .button-wrapper {
+            margin: rem(20) 0;
+        }
+    }
+    .search-wrapper .planet-wrapper {
+        @include flex-direction(column);
+    }
+    app-planets {
+        width: 100%;
+    }
+}

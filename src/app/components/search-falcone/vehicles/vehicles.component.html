@@ -1,0 +1,16 @@
+<div class="vehicle-wrapper fade-in-down" *ngIf="selectedPlanet?.name">
+    <ul clasS="vehicle-list">
+        <li class="" *ngFor="let item of vehicleList; index as i;" [ngClass]="[selectedVehicle && selectedVehicle == item.name ? 'selected-item' : '', 
+         (item.max_distance < selectedPlanet?.distance) || (item.total_no === 0) ? 'disable-item' : '']">
+            <label>
+                <input type="radio" name="vehicleGroup" [value]="item.name" [checked]="item.name == selectedVehicle"
+                    [disabled]="(item.max_distance < selectedPlanet?.distance) || (item.total_no === 0)"
+                    (change)="updateSelectedVehicle($event)" />
+                <div class="vehicle-img-wrapper"><img class="fade-in-down" [src]="imagePath + item.name + '.png'" />
+                </div>
+                {{item.name}} ({{item.total_no}})
+            </label>
+        </li>
+    </ul>
+
+</div>

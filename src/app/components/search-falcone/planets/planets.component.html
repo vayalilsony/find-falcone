@@ -1,0 +1,20 @@
+<div class="planet-section fade-in-down">
+    <div class="planet-content">
+        <h5 class="fade-in">
+            {{selectedPlanet.name ? "Planet Name:  "+ (selectedPlanet.name | uppercase) : "Select Planet"}}</h5>
+        <h6 class="fade-in">
+            {{selectedPlanet.distance > 0 ? "Distance :"+ (selectedPlanet?.distance || "0")  +"megamiles" : ""}}</h6>
+        <div class="image-wrapper">
+            <img class="planet-image" alt="planet-image"
+                [src]="imagePath + (selectedPlanet.name ? selectedPlanet.name + '.png' : 'not-planet.jpg')" />
+        </div>
+        <div class="fade-in-down">
+            <select name="planet" (change)="updateSelectedPlanet($event)">
+                <option value="">Select Planet</option>
+                <option *ngFor="let item of planetList" [value]="item.name">{{item.name}}</option>
+            </select>
+        </div>
+    </div>
+
+    <app-vehicles [selectedPlanet]="selectedPlanet"></app-vehicles>
+</div>

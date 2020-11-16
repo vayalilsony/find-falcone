@@ -1,0 +1,61 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    &:target {
+        visibility: visible;
+        opacity: 1;
+    }
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
+}
+
+.popup {
+    padding: rem(40);
+    background: $white;
+    border-radius: rem(5);
+    width: 70%;
+    position: relative;
+    transition: all 5s ease-in-out;
+    h3 {
+        color: $orange;
+        font-size: rem(28);
+        padding-bottom: rem(20);
+        text-align: center;
+        font-weight: bold;
+    }
+    p {
+        color: $deep-grey;
+        font-size: rem(20);
+        padding-top: rem(20);
+        text-align: center;
+        font-style: italic;
+    }
+    .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        transition: all 200ms;
+        font-size: rem(32);
+        font-weight: bold;
+        text-decoration: none;
+        color: $deep-grey;
+        &:hover {
+            color: $orange;
+        }
+    }
+    .content {
+        max-height: 30%;
+    }
+
+    .resource-img-wrapper img {
+        max-width: 100%;
+    }
+}

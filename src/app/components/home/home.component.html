@@ -1,0 +1,41 @@
+<div class="home-wrapper">
+    <h1 class="fade-in-down">FALCONE BARNSTORM</h1>
+    <div class="home-container">
+        <div class="left-container fade-left-to-right">
+            <h3>Welcome to the planet of Lengaburu!</h3>
+            <p>
+                After the recent Falicornian war, King Shan has exiled Queen Al Falcone for 15 years.
+                However, if he finds her before the 15 years are up, she has to go into exile for another 15 years!
+            </p>
+            <p>
+                King Shan has received intelligence that Al Falcone is in hiding in one of these 6 planets
+                - DonLon, Enchai, Jebing, Sapir, Lerbin & Pingasor.
+                However he has limited resources at his disposal & can send his army to only 4 of these planets.
+            </p>
+            <p>Your task is to help King Shan find Al Falcone.</p>
+        </div>
+        <div class="right-container">
+            <div class="king-img-wrapper fade-in">
+                <img [src]="imagePath" alt="kingShan_img" />
+            </div>
+        </div>
+    </div>
+    <div class="popup-btn-wrapper fade-right-to-left">
+        <a class="popup-button" href="#planets&vehicles">Show planets and available vehicles</a>
+    </div>
+    <div class="button-wrapper fade-in-down">
+        <button class="btn find-falcone" [routerLink]="['searchFalcone']">Help King Shan </button>
+    </div>
+</div>
+<div id="planets&vehicles" class="overlay">
+    <div class="popup">
+        <h3>Planets to search and available space vehicles to reach the targets</h3>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+            <div class="resource-img-wrapper">
+                <img [src]="resourcePath" alt="resources_img" />
+            </div>
+            <p>The planets Al Falcone might be hiding in & the space vehicles available at King Shan’s disposal</p>
+        </div>
+    </div>
+</div>
